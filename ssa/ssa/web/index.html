@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101b2d" />
+    <title>Voice Lab · Grounded renewal assistant</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Voice Lab home">
+          <span class="brand-mark" aria-hidden="true">v</span>
+          <span>voice<span class="brand-light">lab</span></span>
+        </a>
+        <div class="topbar-right">
+          <span class="local-chip"><span class="local-dot"></span>Local demo</span>
+          <button id="health-button" class="icon-button" title="Show system configuration" aria-label="Show system configuration">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5m0-8h.01"></path></svg>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span>VOICE AGENT · KNOWLEDGE BASE · LIVE NUDGES</div>
+            <h1>Conversations that<br /><em>know what they know.</em></h1>
+            <p>A source-grounded renewal assistant with localized call flows and live guidance for the person on the call.</p>
+          </div>
+          <div class="hero-note"><span class="hero-note-icon">✳</span><span>Everything here uses<br /><b>synthetic demo content.</b></span></div>
+        </section>
+
+        <div class="workspace-grid">
+          <section class="main-column" aria-label="Voice agent workspace">
+            <article class="panel call-panel">
+              <div class="panel-heading call-heading">
+                <div>
+                  <div class="panel-kicker">01 / CONVERSATION</div>
+                  <h2>Try the voice agent</h2>
+                </div>
+                <div id="call-state" class="state-pill"><span class="state-dot"></span><span id="call-state-text">Ready</span></div>
+              </div>
+
+              <div class="call-config">
+                <label class="field-label" for="locale-select">CALL FLOW</label>
+                <div class="select-wrap">
+                  <select id="locale-select">
+                    <option value="en-PH">Philippines · English renewal</option>
+                    <option value="fil-PH">Philippines · Filipino / Taglish</option>
+                    <option value="id-ID">Indonesia · Bahasa Indonesia</option>
+                  </select>
+                  <span class="select-chevron">⌄</span>
+                </div>
+                <div class="call-controls">
+                  <button id="start-call" class="button button-primary" disabled>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a3.2 3.2 0 0 0-3.2 3.2v5.5a3.2 3.2 0 0 0 6.4 0V6A3.2 3.2 0 0 0 12 2.8Z"></path><path d="M5.7 10.6v.9a6.3 6.3 0 0 0 12.6 0v-.9M12 17.8v3.4m-3.2 0h6.4"></path></svg>
+                    <span>Start call</span>
+                  </button>
+                  <button id="end-call" class="button button-stop" disabled>End call</button>
+                  <span id="mic-status" class="mic-status">Microphone off</span>
+                </div>
+              </div>
+
+              <div class="consent-row">
+                <label class="check-label">
+                  <input id="test-persona" type="checkbox" />
+                  <span class="custom-check"></span>
+                  <span>This is a synthetic test-persona call.</span>
+                </label>
+                <label class="check-label">
+                  <input id="record-consent" type="checkbox" />
+                  <span class="custom-check"></span>
+                  <span>I consent to save my microphone audio and transcript locally.</span>
+                </label>
+              </div>
+              <div class="notice-strip"><span class="notice-icon">i</span><span>Browser speech recognition may use a browser-managed service. Don’t say real policy numbers or customer information. Saved audio contains microphone input only; the transcript includes both speakers.</span></div>
+
+              <div class="transcript-wrap">
+                <div class="transcript-topline">
+                  <span>LIVE TRANSCRIPT</span>
+                  <span id="transcript-meta">Waiting to start</span>
+                </div>
+                <div id="transcript" class="transcript" aria-live="polite" aria-label="Call transcript">
+                  <div class="empty-transcript">
+                    <div class="sound-rings"><span></span><span></span><span></span></div>
+                    <b>Your conversation will appear here</b>
+                    <span>Choose a call flow, confirm the synthetic persona, then start or type a test message.</span>
+                  </div>
+                </div>
+                <div id="interim-line" class="interim-line" aria-live="polite"></div>
+              </div>
+
+              <form id="message-form" class="composer">
+                <label class="sr-only" for="message-input">Type a test message</label>
+                <input id="message-input" type="text" placeholder="Type a test message if you prefer…" maxlength="2000" autocomplete="off" disabled />
+                <button id="send-message" class="send-button" type="submit" disabled aria-label="Send message">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 3-7.4 18-3.9-7.7L2 9.4 21 3Z"></path><path d="M9.7 13.3 21 3"></path></svg>
+                </button>
+              </form>
+              <div class="call-footline">
+                <span><kbd>Enter</kbd> sends typed message</span>
+                <button id="export-transcript" class="text-button" disabled>Export transcript</button>
+              </div>
+            </article>
+
+            <article class="panel evidence-panel">
+              <div class="panel-heading">
+                <div><div class="panel-kicker">02 / EVIDENCE</div><h2>Test the experience</h2></div>
+                <span class="mini-tag">Repeatable</span>
+              </div>
+              <div class="evidence-actions">
+                <button id="run-scenarios" class="button button-secondary">
+                  <span class="button-icon">↗</span> Run scripted call checks
+                </button>
+                <button id="run-retrieval" class="button button-secondary">
+                  <span class="button-icon">⌕</span> Evaluate knowledge retrieval
+                </button>
+              </div>
+              <p class="small-note">Scripted checks exercise call logic only; they are not audio recordings.</p>
+              <div id="scenario-results" class="scenario-results hidden" aria-live="polite"></div>
+              <div id="retrieval-results" class="retrieval-results hidden" aria-live="polite"></div>
+              <div id="saved-evidence" class="saved-evidence"></div>
+            </article>
+
+            <article class="panel localization-panel">
+              <div class="panel-heading">
+                <div><div class="panel-kicker">03 / LOCALIZATION</div><h2>Words shaped for the market</h2></div>
+                <span class="mini-tag">PH · ID</span>
+              </div>
+              <div id="localization-examples" class="localization-grid">
+                <div class="skeleton-line"></div><div class="skeleton-line"></div>
+              </div>
+            </article>
+          </section>
+
+          <aside class="side-column" aria-label="Live call insight">
+            <article class="panel nudge-panel">
+              <div class="panel-heading">
+                <div><div class="panel-kicker">04 / LIVE GUIDANCE</div><h2>Call-side nudges</h2></div>
+                <div class="live-indicator"><span></span>LIVE</div>
+              </div>
+              <p class="panel-intro">Short, evidence-triggered prompts for the person handling the conversation.</p>
+              <div id="nudges" class="nudges" aria-live="polite">
+                <div class="nudge-empty"><div class="nudge-orbit">◎</div><b>All clear</b><span>No call signals yet. Start a call or test the signal rules below.</span></div>
+              </div>
+              <div class="nudge-policy">
+                <div class="policy-title">NUDGE CONTROLS</div>
+                <div class="policy-item"><span class="policy-icon">⌁</span><span>Confidence gate</span><b>0.65</b></div>
+                <div class="policy-item"><span class="policy-icon">⟳</span><span>Repeat cooldown</span><b>8 sec</b></div>
+                <div class="policy-item"><span class="policy-icon">◷</span><span>Prompt expiry</span><b>20 sec</b></div>
+              </div>
+              <button id="run-nudge-checks" class="text-button signal-test-button">Run nudge logic checks <span>→</span></button>
+              <div class="small-note">Text-based logic check only; the live call path uses microphone transcription.</div>
+            </article>
+
+            <article class="panel kb-panel">
+              <div class="panel-heading">
+                <div><div class="panel-kicker">05 / KNOWLEDGE</div><h2>Source trail</h2></div>
+                <span id="citation-count" class="count-badge">0</span>
+              </div>
+              <p class="panel-intro">Answers stay tied to approved records. Unavailable or conflicting facts trigger a safe fallback.</p>
+              <div id="citations" class="citations"><div class="citation-empty">Sources used in this call will show here.</div></div>
+              <div class="kb-footer"><span class="source-dot"></span><span>Synthetic demo corpus · current records only</span></div>
+            </article>
+
+            <article class="panel latency-panel">
+              <div class="panel-heading">
+                <div><div class="panel-kicker">06 / PERFORMANCE</div><h2>Observed latency</h2></div>
+                <button id="refresh-metrics" class="refresh-button" aria-label="Refresh latency metrics">↻</button>
+              </div>
+              <div class="latency-grid">
+                <div class="latency-cell"><span>ASR</span><b id="latency-asr">—</b><small>P50 / P95</small></div>
+                <div class="latency-cell"><span>SIGNAL</span><b id="latency-signal">—</b><small>P50 / P95</small></div>
+                <div class="latency-cell"><span>LLM</span><b id="latency-llm">Not used</b><small>extractive demo</small></div>
+                <div class="latency-cell"><span>END TO END</span><b id="latency-e2e">—</b><small>P50 / P95</small></div>
+              </div>
+              <div id="metrics-sample" class="metrics-sample">No live samples collected.</div>
+            </article>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <span>VOICE LAB <span class="footer-sep">/</span> SYNTHETIC PROTOTYPE</span>
+        <span>Not connected to an insurer, lender, CRM, or telephony carrier.</span>
+      </footer>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <dialog id="health-dialog" class="health-dialog">
+      <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+      <div class="panel-kicker">RUNTIME CONFIGURATION</div>
+      <h2>What this demo is running</h2>
+      <div id="health-details" class="health-details"></div>
+      <p class="small-note">Language quality and voice availability depend on the browser and device. No cloud speech provider or language model is configured in this local build.</p>
+    </dialog>
+    <script src="/web/runtime.js" defer></script>
+    <script src="/web/app.js" defer></script>
+  </body>
+</html>

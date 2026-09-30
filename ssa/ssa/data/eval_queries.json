@@ -1,0 +1,12 @@
+[
+  {"question":"What is the product in this demonstration?","category":"product","market":"PH","locale":"en-PH","product":"life","expected_record_id":"ph_product_demo"},
+  {"question":"Which finance product does the Indonesia demo represent?","category":"product","market":"ID","locale":"id-ID","product":"consumer_finance","expected_record_id":"id_product_demo"},
+  {"question":"When does the demo renewal review window open?","category":"policy","market":"PH","locale":"en-PH","product":"life","expected_record_id":"ph_renewal_window"},
+  {"question":"When is the Indonesian installment reminder due?","category":"policy","market":"ID","locale":"id-ID","product":"consumer_finance","expected_record_id":"id_installment_schedule"},
+  {"question":"What qualification decision can the demo agent make about renewal eligibility?","category":"qualification","market":"PH","locale":"en-PH","product":"life","expected_record_id":"ph_qualification"},
+  {"question":"What should the Indonesia agent capture before requesting a callback about an angsuran?","category":"qualification","market":"ID","locale":"id-ID","product":"consumer_finance","expected_record_id":"id_qualification"},
+  {"question":"What does a mock callback request record and schedule?","category":"faq","market":"PH","locale":"en-PH","product":"life","expected_record_id":"ph_callback_faq"},
+  {"question":"Does the demo process payment for an Indonesian cicilan?","category":"faq","market":"ID","locale":"id-ID","product":"consumer_finance","expected_record_id":"id_payment_faq"},
+  {"question":"How should the agent respond if a customer says the premium is too expensive?","category":"objection","market":"PH","locale":"en-PH","product":"life","expected_record_id":"ph_premium_objection"},
+  {"question":"What should the agent say if the borrower has trouble paying cicilan and worries about denda?","category":"objection","market":"ID","locale":"id-ID","product":"consumer_finance","expected_record_id":"id_payment_objection"}
+]

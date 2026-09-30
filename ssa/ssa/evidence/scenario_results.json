@@ -1,0 +1,331 @@
+{
+  "created_for": "synthetic test personas and demo-only policy content",
+  "audio_recordings": 0,
+  "logic_scenarios": 11,
+  "verdict_counts": {
+    "correct": 11
+  },
+  "results": [
+    {
+      "scenario_id": "q1_cooperative",
+      "group": "q1",
+      "locale": "en-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is a synthetic insurance-renewal demo. Please don't share policy numbers or sensitive details. What would you like to check?"
+        },
+        {
+          "role": "customer",
+          "text": "When does the demo renewal review window open?"
+        },
+        {
+          "role": "agent",
+          "text": "For this synthetic demonstration only, a renewal review may begin 30 days before the demo renewal date. This is not a real insurance rule; the actual policy schedule and insurer notice control.",
+          "status": "answered",
+          "source_ids": [
+            "ph_renewal_window"
+          ]
+        }
+      ],
+      "expected_status": "answered",
+      "observed_status": "answered",
+      "expected_record_id": "ph_renewal_window",
+      "observed_record_ids": [
+        "ph_renewal_window"
+      ],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q1_objection",
+      "group": "q1",
+      "locale": "en-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is a synthetic insurance-renewal demo. Please don't share policy numbers or sensitive details. What would you like to check?"
+        },
+        {
+          "role": "customer",
+          "text": "The premium is too expensive."
+        },
+        {
+          "role": "agent",
+          "text": "I understand that the premium feels expensive. I can't suggest changing coverage or promise a discount. I can note a callback request if you would like a representative to discuss approved options.",
+          "status": "answered",
+          "source_ids": [
+            "ph_premium_objection"
+          ]
+        }
+      ],
+      "expected_status": "answered",
+      "observed_status": "answered",
+      "expected_record_id": "ph_premium_objection",
+      "observed_record_ids": [
+        "ph_premium_objection"
+      ],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q1_incomplete_conflicting",
+      "group": "q1",
+      "locale": "en-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is a synthetic insurance-renewal demo. Please don't share policy numbers or sensitive details. What would you like to check?"
+        },
+        {
+          "role": "customer",
+          "text": "I have two notices with different dates. I am not sure which schedule is current."
+        },
+        {
+          "role": "agent",
+          "text": "I don't have enough information to tell which schedule is current. Could you confirm which notice you're referring to, or should I ask a representative?",
+          "status": "clarification",
+          "source_ids": []
+        }
+      ],
+      "expected_status": "clarification",
+      "observed_status": "clarification",
+      "expected_record_id": null,
+      "observed_record_ids": [],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q1_out_of_scope",
+      "group": "q1",
+      "locale": "en-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is a synthetic insurance-renewal demo. Please don't share policy numbers or sensitive details. What would you like to check?"
+        },
+        {
+          "role": "customer",
+          "text": "Can you guarantee this synthetic life policy covers diabetes?"
+        },
+        {
+          "role": "agent",
+          "text": "That information is unavailable in the approved demo sources. I can ask a representative to help.",
+          "status": "unavailable",
+          "source_ids": []
+        }
+      ],
+      "expected_status": "unavailable",
+      "observed_status": "unavailable",
+      "expected_record_id": null,
+      "observed_record_ids": [],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q1_human_assistance",
+      "group": "q1",
+      "locale": "en-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is a synthetic insurance-renewal demo. Please don't share policy numbers or sensitive details. What would you like to check?"
+        },
+        {
+          "role": "customer",
+          "text": "Please connect me to a person."
+        },
+        {
+          "role": "agent",
+          "text": "Of course. I've recorded your request for a human representative in this demo.",
+          "status": "escalated",
+          "source_ids": []
+        }
+      ],
+      "expected_status": "escalated",
+      "observed_status": "escalated",
+      "expected_record_id": null,
+      "observed_record_ids": [],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q3_ph_taglish",
+      "group": "q3",
+      "locale": "fil-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Kumusta! Demo ito ng life insurance renewal. Huwag magbahagi ng policy number o sensitibong detalye. Gusto mo bang alamin ang demo renewal information?"
+        },
+        {
+          "role": "customer",
+          "text": "Ano ang ibig sabihin ng rider at beneficiary?"
+        },
+        {
+          "role": "agent",
+          "text": "Sa demo na ito, ang rider ay optional na dagdag na benepisyo sa base policy kung available sa kontrata. Ang beneficiary ay taong nakapangalan upang tumanggap ng benepisyo ayon sa policy terms. Iba-iba ang aktuwal na kahulugan at kondisyon depende sa iyong kontrata, kaya representative ang makakakumpirma.",
+          "status": "answered",
+          "source_ids": [
+            "ph_local_script"
+          ]
+        }
+      ],
+      "expected_status": "answered",
+      "observed_status": "answered",
+      "expected_record_id": "ph_local_script",
+      "observed_record_ids": [
+        "ph_local_script"
+      ],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q3_id_formal",
+      "group": "q3",
+      "locale": "id-ID",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Selamat datang. Ini demo pengingat pembiayaan. Jangan bagikan nomor identitas atau rekening. Apakah Anda ingin memeriksa jadwal cicilan demo?"
+        },
+        {
+          "role": "customer",
+          "text": "Kapan saya harus mengecek tanggal jatuh tempo cicilan?"
+        },
+        {
+          "role": "agent",
+          "text": "Demo saja: agen dapat mengingatkan pelanggan untuk memeriksa tanggal jatuh tempo angsuran atau cicilan. Jumlah, tanggal pembayaran, tenor, DP, denda, dan status pembayaran yang sebenarnya tidak tersedia di sini. Konfirmasikan jadwal terbaru kepada penyedia pembiayaan resmi.",
+          "status": "answered",
+          "source_ids": [
+            "id_installment_schedule"
+          ]
+        }
+      ],
+      "expected_status": "answered",
+      "observed_status": "answered",
+      "expected_record_id": "id_installment_schedule",
+      "observed_record_ids": [
+        "id_installment_schedule"
+      ],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q3_id_colloquial",
+      "group": "q3",
+      "locale": "id-ID",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Selamat datang. Ini demo pengingat pembiayaan. Jangan bagikan nomor identitas atau rekening. Apakah Anda ingin memeriksa jadwal cicilan demo?"
+        },
+        {
+          "role": "customer",
+          "text": "Kalau lagi sulit bayar cicilan, minta petugas bantu ya."
+        },
+        {
+          "role": "agent",
+          "text": "Tentu. Saya mencatat permintaan bantuan petugas manusia untuk demo ini.",
+          "status": "escalated",
+          "source_ids": []
+        }
+      ],
+      "expected_status": "escalated",
+      "observed_status": "escalated",
+      "expected_record_id": null,
+      "observed_record_ids": [],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q3_id_finance_terms",
+      "group": "q3",
+      "locale": "id-ID",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Selamat datang. Ini demo pengingat pembiayaan. Jangan bagikan nomor identitas atau rekening. Apakah Anda ingin memeriksa jadwal cicilan demo?"
+        },
+        {
+          "role": "customer",
+          "text": "Bisa jelaskan tenor, DP, denda, dan angsuran?"
+        },
+        {
+          "role": "agent",
+          "text": "Demo saja: agen dapat mengingatkan pelanggan untuk memeriksa tanggal jatuh tempo angsuran atau cicilan. Jumlah, tanggal pembayaran, tenor, DP, denda, dan status pembayaran yang sebenarnya tidak tersedia di sini. Konfirmasikan jadwal terbaru kepada penyedia pembiayaan resmi.",
+          "status": "answered",
+          "source_ids": [
+            "id_installment_schedule"
+          ]
+        }
+      ],
+      "expected_status": "answered",
+      "observed_status": "answered",
+      "expected_record_id": "id_installment_schedule",
+      "observed_record_ids": [
+        "id_installment_schedule"
+      ],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q3_ph_taglish_objection",
+      "group": "q3",
+      "locale": "fil-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Kumusta! Demo ito ng life insurance renewal. Huwag magbahagi ng policy number o sensitibong detalye. Gusto mo bang alamin ang demo renewal information?"
+        },
+        {
+          "role": "customer",
+          "text": "Mahal yung premium at medyo mabigat sa budget."
+        },
+        {
+          "role": "agent",
+          "text": "Kung mabigat ang premium, naiintindihan ko. Hindi ako magmumungkahi ng pagbabago sa coverage o mangangako ng discount. Maaari kong itala ang callback request kung gusto mong makipag-usap sa representative tungkol sa approved options.",
+          "status": "answered",
+          "source_ids": [
+            "ph_premium_objection_fil"
+          ]
+        }
+      ],
+      "expected_status": "answered",
+      "observed_status": "answered",
+      "expected_record_id": "ph_premium_objection_fil",
+      "observed_record_ids": [
+        "ph_premium_objection_fil"
+      ],
+      "verdict": "correct"
+    },
+    {
+      "scenario_id": "q3_ph_taglish_qualification",
+      "group": "q3",
+      "locale": "fil-PH",
+      "test_type": "scripted logic simulation; no audio recording",
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Kumusta! Demo ito ng life insurance renewal. Huwag magbahagi ng policy number o sensitibong detalye. Gusto mo bang alamin ang demo renewal information?"
+        },
+        {
+          "role": "customer",
+          "text": "Gusto kong mag-renew."
+        },
+        {
+          "role": "agent",
+          "text": "Naitala ko ang interes mong mag-renew. Maaaring kumpirmahin ng kinatawan ang aktuwal na detalye ng policy.",
+          "status": "intent_captured",
+          "source_ids": []
+        }
+      ],
+      "expected_status": "intent_captured",
+      "observed_status": "intent_captured",
+      "expected_record_id": null,
+      "observed_record_ids": [],
+      "verdict": "correct"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {"id":"q1_cooperative","question":"When does the demo renewal review window open?","locale":"en-PH","expected_status":"answered","expected_record_id":"ph_renewal_window","group":"q1"},
+  {"id":"q1_objection","question":"The premium is too expensive.","locale":"en-PH","expected_status":"answered","expected_record_id":"ph_premium_objection","group":"q1"},
+  {"id":"q1_incomplete_conflicting","question":"I have two notices with different dates. I am not sure which schedule is current.","locale":"en-PH","expected_status":"clarification","expected_record_id":null,"group":"q1"},
+  {"id":"q1_out_of_scope","question":"Can you guarantee this synthetic life policy covers diabetes?","locale":"en-PH","expected_status":"unavailable","expected_record_id":null,"group":"q1"},
+  {"id":"q1_human_assistance","question":"Please connect me to a person.","locale":"en-PH","expected_status":"escalated","expected_record_id":null,"group":"q1"},
+  {"id":"q3_ph_taglish","question":"Ano ang ibig sabihin ng rider at beneficiary?","locale":"fil-PH","expected_status":"answered","expected_record_id":"ph_local_script","group":"q3"},
+  {"id":"q3_id_formal","question":"Kapan saya harus mengecek tanggal jatuh tempo cicilan?","locale":"id-ID","expected_status":"answered","expected_record_id":"id_installment_schedule","group":"q3"},
+  {"id":"q3_id_colloquial","question":"Kalau lagi sulit bayar cicilan, minta petugas bantu ya.","locale":"id-ID","expected_status":"escalated","expected_record_id":null,"group":"q3"},
+  {"id":"q3_id_finance_terms","question":"Bisa jelaskan tenor, DP, denda, dan angsuran?","locale":"id-ID","expected_status":"answered","expected_record_id":"id_installment_schedule","group":"q3"},
+  {"id":"q3_ph_taglish_objection","question":"Mahal yung premium at medyo mabigat sa budget.","locale":"fil-PH","expected_status":"answered","expected_record_id":"ph_premium_objection_fil","group":"q3"},
+  {"id":"q3_ph_taglish_qualification","question":"Gusto kong mag-renew.","locale":"fil-PH","expected_status":"intent_captured","expected_record_id":null,"group":"q3"}
+]

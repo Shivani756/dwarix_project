@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.py[cod]
+data/imported_records.json
+evidence/calls/*
+!evidence/calls/.gitkeep

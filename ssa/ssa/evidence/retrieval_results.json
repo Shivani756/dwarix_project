@@ -1,0 +1,295 @@
+{
+  "created_for": "synthetic demo corpus; not real insurer or lending policy",
+  "retrieval_method": "weighted lexical token retrieval with market, locale, product, and category filters; embeddings are not configured in this local build",
+  "total_queries": 11,
+  "verdict_counts": {
+    "correct": 11
+  },
+  "results": [
+    {
+      "question": "What is the product in this demonstration?",
+      "category": "product",
+      "filters": {
+        "market": "PH",
+        "locale": "en-PH",
+        "product": "life"
+      },
+      "retrieved_record": {
+        "record_id": "ph_product_demo",
+        "title": "Synthetic Philippine life insurance renewal demo",
+        "content": "This prototype demonstrates a Philippine life-insurance renewal conversation only. It names no real insurer, policy, product benefit, premium, coverage amount, or rider offer. Ask an authorized insurer representative for actual product information.",
+        "score": 1.3653,
+        "source_reference": {
+          "record_id": "ph_product_demo",
+          "title": "Synthetic Philippine life insurance renewal demo",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/ph/product",
+          "source_section": "Demo scope",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "ph_product_demo",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "Which finance product does the Indonesia demo represent?",
+      "category": "product",
+      "filters": {
+        "market": "ID",
+        "locale": "id-ID",
+        "product": "consumer_finance"
+      },
+      "retrieved_record": {
+        "record_id": "id_product_demo",
+        "title": "Synthetic Indonesian consumer finance reminder",
+        "content": "Demo ini hanya menggambarkan pengingat angsuran pembiayaan konsumen. Demo ini tidak mewakili pemberi pinjaman, pinjaman, saldo, tanggal pembayaran, biaya, atau penawaran pembiayaan yang nyata. Konfirmasikan rincian sebenarnya kepada penyedia pembiayaan resmi.",
+        "score": 0.9402,
+        "source_reference": {
+          "record_id": "id_product_demo",
+          "title": "Synthetic Indonesian consumer finance reminder",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/id/product",
+          "source_section": "Demo scope",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "id_product_demo",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "When does the demo renewal review window open?",
+      "category": "policy",
+      "filters": {
+        "market": "PH",
+        "locale": "en-PH",
+        "product": "life"
+      },
+      "retrieved_record": {
+        "record_id": "ph_renewal_window",
+        "title": "Demo renewal review window",
+        "content": "For this synthetic demonstration only, a renewal review may begin 30 days before the demo renewal date. This is not a real insurance rule; the actual policy schedule and insurer notice control.",
+        "score": 1.5406,
+        "source_reference": {
+          "record_id": "ph_renewal_window",
+          "title": "Demo renewal review window",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/ph/renewal-window",
+          "source_section": "Renewal timing",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "ph_renewal_window",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "When is the Indonesian installment reminder due?",
+      "category": "policy",
+      "filters": {
+        "market": "ID",
+        "locale": "id-ID",
+        "product": "consumer_finance"
+      },
+      "retrieved_record": {
+        "record_id": "id_installment_schedule",
+        "title": "Synthetic cicilan and jatuh tempo reminder",
+        "content": "Demo saja: agen dapat mengingatkan pelanggan untuk memeriksa tanggal jatuh tempo angsuran atau cicilan. Jumlah, tanggal pembayaran, tenor, DP, denda, dan status pembayaran yang sebenarnya tidak tersedia di sini. Konfirmasikan jadwal terbaru kepada penyedia pembiayaan resmi.",
+        "score": 1.5274,
+        "source_reference": {
+          "record_id": "id_installment_schedule",
+          "title": "Synthetic cicilan and jatuh tempo reminder",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/id/installment-schedule",
+          "source_section": "Installment timing",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "id_installment_schedule",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "What qualification decision can the demo agent make about renewal eligibility?",
+      "category": "qualification",
+      "filters": {
+        "market": "PH",
+        "locale": "en-PH",
+        "product": "life"
+      },
+      "retrieved_record": {
+        "record_id": "ph_qualification",
+        "title": "Demo renewal qualification fields",
+        "content": "The synthetic agent may record renewal intent as yes, no, or still considering, and may note a preferred callback window. It must not determine eligibility, approve renewal, collect policy numbers, or promise a coverage outcome.",
+        "score": 1.5402,
+        "source_reference": {
+          "record_id": "ph_qualification",
+          "title": "Demo renewal qualification fields",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/ph/qualification",
+          "source_section": "Qualification rules",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "ph_qualification",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "What should the Indonesia agent capture before requesting a callback about an angsuran?",
+      "category": "qualification",
+      "filters": {
+        "market": "ID",
+        "locale": "id-ID",
+        "product": "consumer_finance"
+      },
+      "retrieved_record": {
+        "record_id": "id_qualification",
+        "title": "Indonesian demo qualification and callback fields",
+        "content": "Untuk demo ini, catat minat pelanggan untuk membahas cicilan dan waktu callback yang dipilih. Jangan menentukan kelayakan, menjanjikan perubahan tenor atau denda, meminta nomor rekening, atau memproses pembayaran.",
+        "score": 1.0678,
+        "source_reference": {
+          "record_id": "id_qualification",
+          "title": "Indonesian demo qualification and callback fields",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/id/qualification",
+          "source_section": "Qualification rules",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "id_qualification",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "What does a mock callback request record and schedule?",
+      "category": "faq",
+      "filters": {
+        "market": "PH",
+        "locale": "en-PH",
+        "product": "life"
+      },
+      "retrieved_record": {
+        "record_id": "ph_callback_faq",
+        "title": "Mock callback request FAQ",
+        "content": "A mock callback request can save the customer's preferred time window and a short summary for the demo. It does not schedule a real call and does not ask for a phone number.",
+        "score": 1.841,
+        "source_reference": {
+          "record_id": "ph_callback_faq",
+          "title": "Mock callback request FAQ",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/ph/callback-faq",
+          "source_section": "Callback request",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "ph_callback_faq",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "Does the demo process payment for an Indonesian cicilan?",
+      "category": "faq",
+      "filters": {
+        "market": "ID",
+        "locale": "id-ID",
+        "product": "consumer_finance"
+      },
+      "retrieved_record": {
+        "record_id": "id_payment_faq",
+        "title": "Demo cicilan reminder FAQ",
+        "content": "Demo pengingat cicilan ini tidak memproses pembayaran atau memastikan status angsuran. Silakan periksa jadwal dan konfirmasikan pembayaran melalui kanal resmi penyedia pembiayaan.",
+        "score": 1.7582,
+        "source_reference": {
+          "record_id": "id_payment_faq",
+          "title": "Demo cicilan reminder FAQ",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/id/payment-faq",
+          "source_section": "Payment FAQ",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "id_payment_faq",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "How should the agent respond if a customer says the premium is too expensive?",
+      "category": "objection",
+      "filters": {
+        "market": "PH",
+        "locale": "en-PH",
+        "product": "life"
+      },
+      "retrieved_record": {
+        "record_id": "ph_premium_objection",
+        "title": "Responding to a premium cost objection",
+        "content": "If a customer says a premium seems too expensive or unaffordable, acknowledge the concern. Do not suggest changing coverage or promise a discount. Offer a representative callback to discuss approved options.",
+        "score": 1.5402,
+        "source_reference": {
+          "record_id": "ph_premium_objection",
+          "title": "Responding to a premium cost objection",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/ph/premium-objection",
+          "source_section": "Premium concern",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "ph_premium_objection",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "What should the agent say if the borrower has trouble paying cicilan and worries about denda?",
+      "category": "objection",
+      "filters": {
+        "market": "ID",
+        "locale": "id-ID",
+        "product": "consumer_finance"
+      },
+      "retrieved_record": {
+        "record_id": "id_payment_objection",
+        "title": "Response to cicilan payment difficulty and denda concern",
+        "content": "Jika pelanggan kesulitan membayar cicilan atau khawatir tentang denda, dengarkan tanpa menghakimi. Jangan menjanjikan penghapusan denda atau perubahan tenor. Tawarkan callback petugas pembiayaan untuk memeriksa pilihan resmi.",
+        "score": 1.8564,
+        "source_reference": {
+          "record_id": "id_payment_objection",
+          "title": "Response to cicilan payment difficulty and denda concern",
+          "source_id": "synthetic_demo_content",
+          "source_uri": "demo://synthetic/id/payment-objection",
+          "source_section": "Payment difficulty",
+          "version": "1.0-demo"
+        }
+      },
+      "expected_record_id": "id_payment_objection",
+      "relevance_explanation": "The top retrieved record matches the labeled question category and approved market/product filters.",
+      "answer_status": "answered",
+      "verdict": "correct"
+    },
+    {
+      "question": "Can you guarantee this synthetic life policy covers diabetes?",
+      "category": "unsupported",
+      "filters": {
+        "market": "PH",
+        "locale": "en-PH",
+        "product": "life"
+      },
+      "retrieved_record": null,
+      "expected_record_id": null,
+      "relevance_explanation": "No approved record supports a medical coverage guarantee; the agent should decline to speculate.",
+      "answer_status": "unavailable",
+      "answer": "That information is unavailable in the approved demo sources. I can ask a representative to help.",
+      "verdict": "correct"
+    }
+  ]
+}

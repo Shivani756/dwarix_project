@@ -1,0 +1,12 @@
+{
+  "PH": [
+    {"intent":"Warm renewal greeting","localized":"Kumusta! Demo lang ito para sa life insurance renewal.","literal_translation":"Magandang araw. Ito ay isang demonstrasyon para sa pag-renew ng seguro sa buhay.","reason":"The Taglish option uses familiar sector wording and a conversational opening while naming the demo clearly."},
+    {"intent":"Ask about policy details","localized":"Gusto mo bang pag-usapan ang premium, beneficiary, rider, o coverage? Ang actual terms ay nasa policy mo.","literal_translation":"Nais mo bang talakayin ang premium, benepisyaryo, karagdagang saklaw, o proteksiyon?", "reason":"Keeps common English finance terms customers use and adds a clear reminder that the actual contract controls."},
+    {"intent":"Unsupported answer fallback","localized":"Wala sa approved demo source ang info na iyan. Gusto mo bang ipa-check sa representative?","literal_translation":"Ang impormasyong iyan ay wala sa pinahintulutang sanggunian.","reason":"Uses natural Taglish and offers a practical next step in the same register."}
+  ],
+  "ID": [
+    {"intent":"Formal installment reminder","localized":"Silakan cek jadwal cicilan dan tanggal jatuh tempo di kanal resmi.","literal_translation":"Mohon periksa jadwal angsuran dan tanggal jatuh tempo pada saluran resmi.","reason":"Uses everyday cicilan while retaining the precise due-date term jatuh tempo."},
+    {"intent":"Colloquial payment difficulty","localized":"Kalau lagi sulit bayar, saya bisa minta petugas cek pilihan resmi buat Anda.","literal_translation":"Jika Anda mengalami kesulitan melakukan pembayaran, saya dapat meminta petugas memeriksa pilihan resmi.","reason":"Acknowledges the difficulty plainly without promising a fee waiver or loan change."},
+    {"intent":"Terms explanation","localized":"Petugas bisa bantu cek tenor, DP, atau angsuran yang sesuai perjanjian Anda.","literal_translation":"Petugas dapat membantu memeriksa jangka waktu, uang muka, atau cicilan sesuai perjanjian Anda.","reason":"Keeps familiar finance loanwords DP and tenor while directing factual confirmation to an agent."}
+  ]
+}
